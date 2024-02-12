@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Wek 6 | Java Demo</title>
+
+    <meta name="author" content="C SOUTHEY">
+    <meta name="description" content="Week 6 | Java demo">
+    <style>
+
+    </style>
+
+</head>
+<body>
+    <!--we should have at least 1 HTML element in the page before the <script> tags-->
+        <h1>W6 | Intro to Javascript Demo</h1>
+
+        <!--IN DOCUMENT JAVASCRIPT-->
+        <script>
+            //writing JS in here
+            //this is a comment in JS
+
+            //all variables must be declared before they can be defined and used
+            //we declare a variable with the keywoard: var
+
+            var name //declares only, now browser understands what 'name' is when seen
+            name = "CS"
+
+            var name = "CS" //declaration and immediate assignment
+
+            var num1 = 10
+            var num2 = 7
+
+            var sum = num1 + num2
+
+            //OUTPUT-------------------------------
+            //cannot use num1 and num2 in a processuntil they are both decalred and defined
+            console.log(`Num1: ${num1} | Num2: ${num2} | Sum: ${sum}`)
+            //console.log() only used for development/debugging
+
+            //alert() can be seen/viewed by a user visiting the page
+            //create a pop-up window in the browser page; user must interact with the alert() before any othe rlinesare read
+
+            alert(`Hi there, ${name}`)
+
+            console.log(`passed the alert()`)
+
+
+            //INPUT----------------------------------
+            //prompt() prompting the user with a message; a pop-up with text field input element is displayed
+            var lname = prompt(`Hi again ${name}, Please enter your LAST name: `)
+            console.log(`passed the prompt()`)
+
+            console.log(`Last: ${lname}`) //for developing/debugging
+            alert(`Last: ${lname}`)      //for user
+
+            //CAST PROMPT RETURNS TO ENSURE THEY ARE NUMBERS
+            var userNum = Number(prompt(`Enter a number: `))
+
+            console.log(userNum.toFixed(2))
+
+            var tax = userNum * 0.20
+
+            alert(`Your TAXES DUE : $${tax.toFixed(2)}`)
+            console.log(`Your TAXES DUE : $${tax.toFixed(2)}`)
+
+        </script>
+
+</body>
+</html>
