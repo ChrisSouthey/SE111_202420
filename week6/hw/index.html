@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Week 6 | Intro to Javascript</title>
+
+    <meta name="author" content="C SOUTHEY">
+    <meta name="description" content="Intro to Javascript">
+</head>
+<body>
+
+    <h1>Week 6 | Intro to Javascript lab</h1>
+    
+    <script>
+        //Variables
+        var tax = 0.2
+        var hourlyPay = Number(prompt(`Please enter your HOURLY pay rate: `))
+        console.log(`Hourly pay = ${hourlyPay}`)
+        var hoursWorked = Number(prompt("Please enter the amount of hours worked over a TWO WEEK period: "))
+        console.log(`Hours worked = ${hoursWorked}`)
+
+        //Math stuff
+        var grossPay = hoursWorked * hourlyPay
+        var taxedAmount = grossPay * tax
+        var netPay = grossPay - taxedAmount
+
+        //printing info
+        alert(`Gross pay: $${grossPay.toFixed(2)} \n Taxed Amount: $${taxedAmount.toFixed(2)} \n Net pay: $${netPay.toFixed(2)}`)
+        console.log(`Gross pay: $${grossPay.toFixed(2)} \n Taxed Amount: $${taxedAmount.toFixed(2)} \n Net pay: $${netPay.toFixed(2)}`)
+
+
+        //Javascript kinda fun to code with 
+    </script>
+</body>
+</html>
