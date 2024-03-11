@@ -41,7 +41,7 @@
 		var first = document.querySelector(`#first`)
 		var last = document.querySelector(`#last`)
 		var button = document.querySelector(`#button`)
-		var output = document.querySelector(`#output`)
+		var outputDiv = document.querySelector(`#output`)
 
 		//Make an array to store the people
 		var people = []
@@ -72,8 +72,8 @@
 				//2. last: will be a string that uses the last Input's value
 
             var person = {
-				first: `${first}`,
-				last: `${last}`
+				first: first.value,
+				last: last.value
 
 
             }//end of person object
@@ -83,8 +83,8 @@
 
 			//Add the person object into the people array by using the .push() array method.
 			
-			
 			people.push(person)
+
 			//Bubble sort people on the last name
 			for(let i=0; i < people.length-1; i++)
 			{
@@ -103,7 +103,7 @@
 			console.log(people)
 
 			//create a variable called 'output' that has an empty string value stored to 
-			var output = ``
+			var output = ` `
 
 			//Loop through the objects in the people array
 			for(let i = 0; i < people.length; i++)
@@ -116,8 +116,9 @@
 					//Output will resemble:
 					//FIRST: Ivan
 					//LAST: Drago
-					output += `<p><b>${first.toUpperCase()}:</b> ${people[i]}</p>`
-					output += `<p><b>${last.toUpperCase()}:</b> ${people[i]}</p>`
+					output += `<p><b>${key.toUpperCase()}:</b> ${people[i][key]}</p>`
+					
+				
 
                 }
                 //add a <hr> to the output at the end of this outter loop so a horizontal rule is displayed inbetween each person being displayed to the screen.
@@ -129,7 +130,7 @@
 				//log the output string
 				console.log(output)
 				//replace the outputDiv's inner HTML with the output string
-				document.querySelector(`#output`).innerHTML += output
+				outputDiv.innerHTML = output
 
 
 
